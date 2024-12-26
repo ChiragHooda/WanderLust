@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-none d-sm-block" href="/listings"><i class="fa-regular fa-compass"></i></a>
+
+      <div class="navbar-nav mx-auto d-none d-sm-block d-lg-none">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="search-btn btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+      </div>
+
+      <div class="navbar-nav mx-auto  d-sm-none d-md-none d-lg-none">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 xswd" type="search" placeholder="Search" aria-label="Search">
+          <button class="search-btn btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+      </div>
+
+      <button class="navbar-toggler d-none d-sm-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">All Listings</a>
+        </div>
+
+        <div class="navbar-nav ms-auto d-none d-lg-block">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="search-btn btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+          </form>
+        </div>
+        
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <% if(!currUser){ %>
+            <a class="nav-link" href="/signup">Sign Up</a>
+            <a class="nav-link" href="/login">Log In</a>
+          <% } %>
+          <% if(currUser){ %>
+            <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+          <a class="nav-link d-lg-none">
+            <div class="form-check form-switch form-check-reverse">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+              <label class="form-check-label" for="flexSwitchCheckReverse">Display total after taxes</label>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
